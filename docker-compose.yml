@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+    command: yarn dev
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app

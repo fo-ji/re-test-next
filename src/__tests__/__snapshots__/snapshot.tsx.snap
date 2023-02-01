@@ -3,100 +3,86 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="container"
+    class="flex justify-center items-center flex-col min-h-screen font-mono"
   >
-    <main>
-      <h1
-        class="title"
+    <header>
+      <nav
+        class="bg-gray-800 w-screen"
       >
-        Welcome to 
-        <a
-          href="https://nextjs.org"
+        <div
+          class="flex items-center pl-8 h-14"
         >
-          Next.js!
-        </a>
-      </h1>
+          <div
+            class="flex space-x-4"
+          >
+            <a
+              class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+              data-testid="home-nav"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+              data-testid="blog-nav"
+              href="/blog-page"
+            >
+              Blog
+            </a>
+            <a
+              class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+              data-testid="comment-nav"
+              href="/comment-page"
+            >
+              Comment
+            </a>
+            <a
+              class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+              data-testid="context-nav"
+              href="/context-page"
+            >
+              Context
+            </a>
+            <a
+              class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
+              data-testid="task-nav"
+              href="/task-page"
+            >
+              Todos
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="flex flex-1 justify-center items-center flex-col w-screen"
+    >
       <p
-        class="description"
+        class="text-4xl"
       >
-        Get started by editing 
-        <code>
-          pages/index.js
-        </code>
+        Welcome to Nextjs
       </p>
-      <div
-        class="grid"
-      >
-        <a
-          class="card"
-          href="https://nextjs.org/docs"
-        >
-          <h3>
-            Documentation →
-          </h3>
-          <p>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://nextjs.org/learn"
-        >
-          <h3>
-            Learn →
-          </h3>
-          <p>
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://github.com/vercel/next.js/tree/canary/examples"
-        >
-          <h3>
-            Examples →
-          </h3>
-          <p>
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
-        <a
-          class="card"
-          href="https://vercel.com/new"
-        >
-          <h3>
-            Deploy →
-          </h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
     <footer
-      class="footer"
+      class="w-full h-12 flex justify-center items-center border-t"
     >
       <a
+        class="flex items-center"
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         rel="noopener noreferrer"
         target="_blank"
       >
         Powered by
-         
-        <span
-          class="logo"
-        >
-          <img
-            alt="Vercel Logo"
-            data-nimg="1"
-            decoding="async"
-            height="16"
-            loading="lazy"
-            src="/vercel.svg"
-            style="color: transparent;"
-            width="72"
-          />
-        </span>
+        <img
+          alt="Vercel Logo"
+          data-nimg="1"
+          decoding="async"
+          height="16"
+          loading="lazy"
+          src="/vercel.svg"
+          style="color: transparent;"
+          width="72"
+        />
       </a>
     </footer>
   </div>

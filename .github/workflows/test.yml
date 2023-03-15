@@ -1,15 +1,27 @@
 name: Test Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v3
-      - name: Use Node.js v18.12.0
+
+      - name: setup-node
         uses: actions/setup-node@v3
         with:
           node-version: '18.12.0'
+
+      - name: yarn-install
       - run: yarn install
+
+      - name: yarn-test
       - run: yarn test
+
+      - name: yarn-build
+      - run: yarn build

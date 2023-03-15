@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: setup-node
         uses: actions/setup-node@v3
@@ -18,10 +18,10 @@ jobs:
           node-version: '18.12.0'
 
       - name: yarn-install
-      - run: yarn install
+        run: yarn install
 
       - name: yarn-test
-      - run: yarn test
+        run: yarn test
 
       - name: yarn-build
-      - run: yarn build
+        run: yarn build
